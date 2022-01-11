@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+p,h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    padding: 0 15px;
+}
+
+.container.container-640 {
+    max-width: 640px;
+}
+
+.nav-header {
+    padding: 40px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.nav .slick-track {
+    padding: 15px 0;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    padding: 6px 25px;
+
+    background-color: #fff;
+    box-shadow: 1px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.nav__item:hover svg path {
+    fill: #fff;
+}
+
+.nav__item:hover {
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+    color: #fff;
+}
+
+.nav__item:hover .nav__circle {
+    border-color: #fff;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.nav__item.active {
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+    color: #fff;
+}
+
+.nav__item.active:hover {
+    opacity: .9;
+}
+
+.nav__circle {
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000000;
+    border-radius: 50px;
+
+    position: relative;
+}
+
+.nav__circle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav__icon {
+    margin-right: 10px;
+}
+
+.styled-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.price__inner {
+    display: flex;
+}
+
+.price__container {
+    position: relative;
+}
+
+.price__checkbox {
+    user-select: none;
+}
+
+.styled-checkbox+label::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    border-radius: 7px;
+
+    margin-right: 23px;
+}
+
+.styled-checkbox:checked+label::before {
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+    border: none;
+}
+
+.styled-checkbox+label {
+    display: flex;
+    align-items: center;
+}
+
+.styled-checkbox:checked+label::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 10px;
+    border-bottom: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    transform: rotate(-45deg);
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.nav .slick-next {
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    
+}
+
+.nav .slick-next:hover {
+    opacity: .8;
+}
+
+.nav .slick-next {
+    position: absolute;
+    right: 0;
+}
+
+.nav .slick-prev {
+    left: 0;
+    top: 20px;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.nav .slick-prev::before {
+    content: "<";
+    padding: 13px 18px;
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%); 
+    opacity: 1;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 7px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav .slick-next::before {
+    content: ">";
+    padding: 13px 18px;
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%); 
+    opacity: 1;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@media screen and (max-width: 767px) {
+    .bottom-header__icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 15px 0;
+        background-color: #fff;
+        z-index: 10000;
+        transform: translateY(100%);
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+
+        transition: transform .3s ease;
+    }
+
+    .bottom-header__icons.active {
+        transform: translateY(0);
+    }
+
+    .icon-header, .header__icon {
+        margin-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .nav__item {
+        display: flex;
+        justify-content: center;
+    }
+}

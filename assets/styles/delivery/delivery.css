@@ -1,0 +1,149 @@
+.about {
+    background-color: #fff;
+
+    padding-top: 15px;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.location__text {
+    color: #A0A0A0;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.location__text:not(:first-child) {
+    margin-left: 10px;
+}
+
+.about__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+
+    margin-top: 15px;
+}
+
+.about__text {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.about__location {
+    display: flex;
+}
+
+.location__text.hoverable {
+    cursor: pointer;
+}
+
+.location__text.hoverable:hover {
+    text-decoration: underline;
+}
+
+.delivery__info {
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    display: flex;
+}
+
+.info__right .info__item {
+    width: 200px;
+}
+
+.info__item {
+    position: relative;
+    padding: 20px 0 20px 50px;
+}
+
+.info__item.more-padding {
+    padding: 20px 0 20px 60px;
+}
+
+.info__item:first-child {
+    border-bottom: 1px solid #EAEAEA;
+    border-radius: 7px;
+}
+
+.info__icon {
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.self-getting__title {
+    margin-top: 6px;
+
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.self-getting__text {
+    margin-top: 20px;
+
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.info__item.delivery {
+    margin-bottom: 25px;
+}
+
+.info__item.by-us {
+    margin-top: 25px;
+}
+
+.info__item.no-border {
+    border-bottom: none;
+}
+
+.list__item {
+    padding-left: 30px;
+
+    position: relative;
+}
+
+.list__item::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+    border-radius: 50%;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .delivery__info {
+        display: block;
+    }
+
+    .info__right {
+        padding: 0 15px;
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .info__right .info__item {
+        width: 100%;
+    }
+
+    .info__item:last-child {
+        border-bottom: 1px solid #EAEAEA;
+    }
+}

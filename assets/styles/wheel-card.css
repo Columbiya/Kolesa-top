@@ -1,0 +1,400 @@
+.gallery__item {
+    width: 195px;
+    padding: 20px 20px;
+    margin-top: 10px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 7px;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.gallery__item:hover .gallery__item-hover {
+    transform: rotateY(0);
+}
+
+.gallery__item:hover {
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.gallery__item.card:hover {
+    box-shadow: none;
+}
+
+.gallery__types {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item__circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.item__circle.orange {
+    background-color: #FF7A00;
+}
+
+.item__circle.blue {
+    background-color: #1D7EC3;
+}
+
+.item__circle.black {
+    background-color: #000;
+}
+
+.catalog__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.catalog__type {
+    position: relative;
+    
+    width: 40px;
+    height: 30px;
+
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__type {
+    font-size: 14px;
+}
+
+.item__type.orange {
+    color: #FF7A00;
+}
+
+.item__type.blue {
+    color: #1D7EC3;
+}
+
+.item__type.black {
+    color: #000;
+}
+
+.item__wheel {
+    margin-top: 15px;
+}
+
+.item__snowflake {
+    left: 20px;
+    top: 63px;
+}
+
+.item__gift {
+    left: 20px;
+    top: 112px;
+}
+
+.item__heart {
+    right: 25px;
+    top: 64px;
+}
+
+.item-icon {
+    position: absolute;
+}
+
+.item-icon:hover {
+    opacity: .8;
+}
+
+.item__logo {
+    padding: 6px 0;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 20px;
+    top: 200px;
+    
+    width: 61px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.item__title {
+    font-size: 14px;
+    line-height: 22px;
+
+    margin-top: 20px;
+
+}
+
+.descr__item {
+    font-size: 10px;
+    line-height: 10px;
+    color: #515151;
+
+    padding: 5px;
+    background: #ECECEC;
+    border-radius: 5px;
+}
+
+.item__comments {
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comments__text {
+    font-size: 12px;
+    line-height: 10px;
+    color: #515151;
+}
+
+.item__subtitle {
+    color: #A0A0A0;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.item__subtitle.in-stock {
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+}
+
+.item__price-number {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.item__creditory {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+.item__footer-upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 10px 0;
+}
+
+.item__add-to-cart {
+    padding: 5px 10px;
+
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+    border-radius: 7px;
+}
+
+.item__add-to-cart:hover {
+    opacity: .9;
+}
+
+.item__footer-text {
+    font-size: 9px;
+    line-height: 14px;
+    padding: 5px;
+
+    position: relative;
+    z-index: 100;
+
+    display: block;
+}
+
+.item__footer-text::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+    border-radius: 7px;
+    opacity: 0.15;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery__item.card {
+    padding: 20px;
+
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery__item-hover {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    transform: rotateY(90deg);
+
+    transition: transform .5s ease;
+}
+
+.item-hover__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.gallery__item-hover-image {
+    width: 140px;
+
+    opacity: .2;
+}
+
+.gallery__item-hover-image.disk {
+    margin-bottom: 50px;
+}
+
+.item-hover__text {
+    color: #fff;
+}
+
+.gallery__item.mark::after {
+    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+
+    border-radius: 7px;
+
+    position: absolute;
+    top: 50px;
+    left: 20px;
+
+    display: block;
+    padding: 4px 7px;
+}
+
+.catalog-disk__gallery .gallery__item.mark::after {
+    top: 10px;
+    left: 10px;
+}
+
+.gallery__item.top-sales::after {
+    content: "Лидер продаж";
+
+    background: radial-gradient(63% 144.14% at 82.91% 29%, #FF7A00 0%, #F5636C 100%);
+}
+
+.gallery__item.new::after {
+    content: "New";
+
+    background: #3CAA3C;
+}
+
+.gallery__item.sale-20::after {
+    content: "-20%";
+
+    background: #F24D3D;
+}
+
+@media screen and (max-width: 435px) {
+    .item__circle {
+        left: 50%;
+    }
+
+    .gallery__item {
+        width: 135px;
+    }
+
+    .wheel-image {
+        width: 130px;
+    }
+
+    .descr__item {
+        font-size: 9px;
+    }
+
+    .gallery__item {
+        padding: 10px 0;
+    }
+
+    .item__snowflake {
+        left: 9px;
+    }
+
+    .item__gift {
+        left: 8px;
+    }
+
+    .item__heart {
+        right: 9px;
+    }
+
+    .item__logo {
+        top: 179px;
+        left: 0;
+    }
+}
+
+
+.card__title {
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.card__text {
+    font-size: 15px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.card__image {
+    opacity: .1;
+}
+
+@media screen and (max-width: 824px) {
+    .gallery__item.card {
+        display: none
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .item__footer-text {
+        font-size: 8px;
+    }
+}

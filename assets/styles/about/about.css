@@ -1,0 +1,48 @@
+.about {
+    height: 80vh;
+
+    background-color: #fff;
+    
+    padding-top: 15px;
+}
+
+.location__text {
+    color: #A0A0A0;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.location__text:not(:first-child) {
+    margin-left: 10px;
+}
+
+.about__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+
+    margin-top: 15px;
+}
+
+.about__text {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.about__location {
+    display: flex;
+}
+
+.location__text.hoverable {
+    cursor: pointer;
+}
+
+.location__text.hoverable:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .about__title {
+        margin-bottom: 30px;
+    }
+}
